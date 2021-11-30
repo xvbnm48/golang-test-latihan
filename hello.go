@@ -4,14 +4,16 @@ import "fmt"
 
 const englishHelloPrefix = "Hello, "
 
-func Hello(name string) string {
+func Hello(name string, bahasa string) string {
 	//	return englishHelloPrefix + name
 
-	if name == "" {
+	if name == "" && bahasa == "" {
 		name = "Sakura Endo"
+		bahasa = "jepang"
 	}
-	return englishHelloPrefix + name
+
+	return englishHelloPrefix + name + bahasa
 }
 func main() {
-	fmt.Println(Hello("world"))
+	fmt.Println(Hello("world", "jepang"))
 }
